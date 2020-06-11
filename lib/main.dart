@@ -19,6 +19,7 @@ class Quizzler extends StatelessWidget {
           ),
         ),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -38,13 +39,12 @@ class _QuizPageState extends State<QuizPage> {
       if (quizBrain.isFinished() == true) {
         Alert(
           context: context,
-          title: 'Finished!',
-          desc: 'You\'ve reached the end of the quiz.',
+          title: 'Terminou!',
+          desc: 'Você chegou ao fim do quiz.',
         ).show();
         quizBrain.reset();
         scoreKeeper = [];
-      }
-      else {
+      } else {
         if (userPickedAnswer == correctAnswer) {
           scoreKeeper.add(Icon(
             Icons.check,
@@ -90,7 +90,7 @@ class _QuizPageState extends State<QuizPage> {
               textColor: Colors.white,
               color: Colors.green,
               child: Text(
-                'True',
+                'Verdadeiro',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,
@@ -109,7 +109,7 @@ class _QuizPageState extends State<QuizPage> {
             child: FlatButton(
               color: Colors.red,
               child: Text(
-                'False',
+                'Falso',
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Colors.white,

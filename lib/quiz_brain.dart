@@ -4,30 +4,32 @@ class QuizBrain {
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
-    Question('Some cats are actually allergic to humans', true),
-    Question('You can lead a cow down stairs but not up stairs.', false),
-    Question('Approximately one quarter of human bones are in the feet.', true),
-    Question('A slug\'s blood is green.', true),
-    Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
-    Question('It is illegal to pee in the Ocean in Portugal.', true),
+    Question('Alguns gatos tem alergia de humanos.', true),
     Question(
-        'No piece of square dry paper can be folded in half more than 7 times.',
+        'Você pode levar uma vaca escada abaixo, mas não escada acima.', false),
+    Question(
+        'Aproximadamente um quarto dos ossos humanos estão nos pés.', true),
+    Question('O sangue de uma lesma é verde.', true),
+    Question('O nome de solteira da mãe de Buzz Aldrin era \"Moon\".', true),
+    Question('É ilegal fazer xixi no oceano em Portugal.', true),
+    Question(
+        'Nenhum pedaço de papel quadrado seco pode ser dobrado ao meio mais de 7 vezes.',
         false),
     Question(
-        'In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.',
+        'Em Londres, Reino Unido, se você morrer na Câmara do Parlamento, você tem tecnicamente o direito a um funeral de Estado, porque o edifício é considerado um local sagrado.',
         true),
     Question(
-        'The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.',
+        'O som mais alto produzido por qualquer animal é de 188 decibéis. Esse animal é o elefante africano.',
         false),
     Question(
-        'The total surface area of two human lungs is approximately 70 square metres.',
+        'A área total da superfície de dois pulmões humanos é de aproximadamente 70 metros quadrados.',
         true),
-    Question('Google was originally called \"Backrub\".', true),
+    Question('O Google foi originalmente chamado de \"Backrub\".', true),
     Question(
-        'Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.',
+        'Chocolate afeta o coração e o sistema nervoso de um cachorro; algumas onças são suficientes para matar um cachorro pequeno.',
         true),
     Question(
-        'In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.',
+        'Na Virgínia Ocidental, EUA, se você acidentalmente bater em um animal com seu carro, poderá levá-lo para casa para comer.',
         true),
   ];
 
@@ -47,11 +49,7 @@ class QuizBrain {
 
   bool isFinished() {
     if (_questionNumber >= _questionBank.length - 1) {
-
-
-      print('Now returning true');
       return true;
-
     } else {
       return false;
     }
